@@ -6,7 +6,7 @@ import requests
 import urllib
 
 page = 0 # Starting page number
-folder = "images/"
+folder = "images/" # Requires you to make a folder called images where the script is.
 
 while page <= 698: # Have to set this to exact number since they will return to the first image if you go over
     # Make the new url
