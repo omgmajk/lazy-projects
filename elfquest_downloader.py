@@ -1,3 +1,6 @@
+# Script to download all images from the ElfQuest website original series.
+# Created out of lazyness. 
+
 from bs4 import BeautifulSoup
 import os
 import sys
