@@ -19,7 +19,8 @@ while page <= 698: # Have to set this to exact number since they will return to 
     img = "http://elfquest.com/read/" + imgSoup['src']
 
     # Download the image
-    urllib.request.urlretrieve(img, folder + os.path.basename(imgSoup['src'].rstrip())) # Basename used to extract just the filename,, rstrip to remove \n
+    urllib.request.urlretrieve(img, folder + os.path.basename(imgSoup['src'].rstrip()))
+    # Basename used to extract just the filename,, rstrip to remove ending \n from bad website.
 
     # Just print, increment and sleep
     print("Image downloaded: ", img.rstrip())
