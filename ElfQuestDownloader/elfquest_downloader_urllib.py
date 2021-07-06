@@ -9,7 +9,10 @@ import requests
 import urllib
 
 page = 0 # Starting page number
-folder = "images/" # Requires you to make a folder called images where the script is.
+folder = "images/"
+
+# Makes the folder
+os.mkdir(folder)
 
 while page <= 698: # Have to set this to exact number since they will return to the first image if you go over
     # Make the new url
@@ -23,7 +26,7 @@ while page <= 698: # Have to set this to exact number since they will return to 
 
     # Download the image
     urllib.request.urlretrieve(img, folder + os.path.basename(imgSoup['src'].rstrip()))
-    # Basename used to extract just the filename,, rstrip to remove ending \n from bad website.
+    # Basename used to extract just the filename, rstrip to remove ending \n from bad website.
 
     # Just print, increment and sleep
     print("Image downloaded: ", img.rstrip())
